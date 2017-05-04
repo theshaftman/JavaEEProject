@@ -8,8 +8,8 @@ import softuni.areas.characters.enums.CharacterLevel;
 import softuni.areas.characters.enums.CharacterType;
 import softuni.areas.characters.models.binding.CharacterCreateModel;
 import softuni.areas.characters.models.view.CharacterAjaxModel;
+import softuni.areas.characters.models.view.CharacterPointsModel;
 import softuni.areas.characters.models.view.CharacterViewModel;
-import softuni.areas.characters.models.view.CharacterMoneyModel;
 import softuni.areas.characters.models.view.DetailsViewModel;
 import softuni.areas.characters.repositories.CharacterRepository;
 import softuni.areas.tasks.entities.Task;
@@ -121,9 +121,9 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     @Override
-    public CharacterMoneyModel characterMoney(Long id) {
+    public CharacterPointsModel characterPoints(Long id) {
         Character character = this.characterRepository.findOne(id);
-        CharacterMoneyModel cvm = new CharacterMoneyModel();
+        CharacterPointsModel cvm = new CharacterPointsModel();
 
         this.modelMapper.map(character, cvm);
 

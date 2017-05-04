@@ -1,9 +1,9 @@
 package softuni.areas.characters.models.view;
 
-public class CharacterMoneyModel {
+public class CharacterPointsModel {
     private Long id;
 
-    private Long money;
+    private Long points;
 
     public Long getId() {
         return id;
@@ -13,11 +13,11 @@ public class CharacterMoneyModel {
         this.id = id;
     }
 
-    public Long getMoney() {
-        return money;
+    public Long getPoints() {
+        return points;
     }
 
-    public void setMoney(Long money) {
-        this.money = money;
+    public void setPoints(Long points) {
+        this.points = points;
     }
 }

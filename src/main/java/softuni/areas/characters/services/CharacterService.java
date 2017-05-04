@@ -3,8 +3,8 @@ package softuni.areas.characters.services;
 import softuni.areas.characters.entities.Character;
 import softuni.areas.characters.models.binding.CharacterCreateModel;
 import softuni.areas.characters.models.view.CharacterAjaxModel;
+import softuni.areas.characters.models.view.CharacterPointsModel;
 import softuni.areas.characters.models.view.CharacterViewModel;
-import softuni.areas.characters.models.view.CharacterMoneyModel;
 import softuni.areas.characters.models.view.DetailsViewModel;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public interface CharacterService {
 
     void update(Character character);
 
-    CharacterMoneyModel characterMoney(Long id);
+    CharacterPointsModel characterPoints(Long id);
 
     CharacterAjaxModel characterAjax(Long id);
 }

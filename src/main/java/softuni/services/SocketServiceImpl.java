@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 import softuni.areas.characters.models.view.CharacterAjaxModel;
-import softuni.areas.characters.models.view.CharacterMoneyModel;
+import softuni.areas.characters.models.view.CharacterPointsModel;
 import softuni.constants.Config;
 
 
@@ -18,8 +18,8 @@ public class SocketServiceImpl implements SocketService {
     }
 
     @Override
-    public void sendMoneyUpdate(CharacterMoneyModel character) {
-        this.template.convertAndSend(Config.CharacterMoneyDestination, character);
+    public void sendPointsUpdate(CharacterPointsModel characterPoints) {
+        this.template.convertAndSend(Config.CharacterMoneyDestination, characterPoints);
     }
 
     @Override

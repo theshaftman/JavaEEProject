@@ -3,7 +3,7 @@ package softuni.areas.characters.models.view;
 public class CharacterAjaxModel {
     private Long id;
 
-    private Long money;
+    private Long points;
 
     private String level;
 
@@ -15,12 +15,12 @@ public class CharacterAjaxModel {
         this.id = id;
     }
 
-    public Long getMoney() {
-        return money;
+    public Long getPoints() {
+        return points;
     }
 
-    public void setMoney(Long money) {
-        this.money = money;
+    public void setPoints(Long points) {
+        this.points = points;
     }
 
     public String getLevel() {

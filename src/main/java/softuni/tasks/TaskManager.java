@@ -54,13 +54,13 @@ public class TaskManager {
                 }
             }
 
-            Long money = (completedTasksCount * 20L) - (failedTasksCount * 10L);
+            Long points = (completedTasksCount * 20L) - (failedTasksCount * 10L);
 
-            character.addMoney(money);
+            character.addPoints(points);
 
             this.characterService.update(character);
 
-            this.socketService.sendMoneyUpdate(this.characterService.characterMoney(character.getId()));
+            this.socketService.sendPointsUpdate(this.characterService.characterPoints(character.getId()));
         }
     }
 }

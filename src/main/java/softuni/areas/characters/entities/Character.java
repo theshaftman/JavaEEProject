@@ -19,7 +19,7 @@ public class Character {
 
     private String name;
 
-    private Long money = 0L;
+    private Long points = 0L;
 
     private Boolean onMission = false;
 
@@ -67,12 +67,12 @@ public class Character {
         this.name = name;
     }
 
-    public Long getMoney() {
-        return money;
+    public Long getPoints() {
+        return points;
     }
 
-    public void setMoney(Long money) {
-        this.money = money;
+    public void setPoints(Long money) {
+        this.points = money;
     }
 
     public Boolean getOnMission() {
@@ -107,7 +107,7 @@ public class Character {
     }
 
     @Transient
-    public void addMoney(Long money) {
-        this.money += money;
+    public void addPoints(Long points) {
+        this.points += points;
     }
 }

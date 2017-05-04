@@ -31,8 +31,7 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Level</th>
-                        <th>Money</th>
-                        <th>Actions</th>
+                        <th>Points</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -40,21 +39,7 @@
                         <th scope="row" th:text="${iter.count}"></th>
                         <td th:text="*{name}"></td>
                         <td th:text="${T(softuni.areas.characters.enums.CharacterLevel).of(character.xp).getName()}" th:id="|level-*{id}|"></td>
-                        <td th:text="*{money}" th:id="|money-*{id}|"></td>
-                        <td>
-                            <button th:attr="data-id=*{id}" type="button" class="btn btn-secondary btn-sm btn-details"
-                                    data-toggle="modal"
-                                    data-target="#info-modal">
-                                Info
-                            </button>
-
-                            <button th:if="*{!onMission}" th:attr="data-id=*{id}" type="button" th:id="|char-*{id}|"
-                                    class="btn btn-secondary btn-sm btn-tasks"
-                                    data-toggle="modal"
-                                    data-target="#info-modal">
-                                Select Mission
-                            </button>
-                        </td>
+                        <td th:text="*{points}" th:id="|points-*{id}|"></td>
                     </tr>
                     </tbody>
                 </table>

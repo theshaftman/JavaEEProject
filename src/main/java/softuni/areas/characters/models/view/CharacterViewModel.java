@@ -7,7 +7,7 @@ public class CharacterViewModel {
 
     private String name;
 
-    private Long money;
+    private Long points;
 
     private Boolean onMission;
 
@@ -35,12 +35,12 @@ public class CharacterViewModel {
         this.name = name;
     }
 
-    public Long getMoney() {
-        return money;
+    public Long getPoints() {
+        return points;
     }
 
-    public void setMoney(Long money) {
-        this.money = money;
+    public void setPoints(Long points) {
+        this.points = points;
     }
 
     public Boolean getOnMission() {
