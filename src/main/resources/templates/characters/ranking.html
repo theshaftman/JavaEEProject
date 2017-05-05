@@ -12,7 +12,7 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Level</th>
-                        <th>Money</th>
+                        <th>Points</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -20,8 +20,7 @@
                         <th scope="row" th:text="${iter.count}"></th>
                         <td th:text="*{name}"></td>
                         <td th:text="${T(softuni.areas.characters.enums.CharacterLevel).of(character.xp).getName()}"></td>
-                        <td th:text="*{money}"></td>
-
+                        <td th:text="*{points}"></td>
                     </tr>
                     </tbody>
                 </table>

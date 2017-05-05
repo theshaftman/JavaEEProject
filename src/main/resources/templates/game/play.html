@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form th:action="@{/checkAnswer}" method="post" th:object="${playWordModel}">
+                    <div class="form-group row">
+                        <label th:for="*{playWord}" class="sr-only">Question: </label>
+                        <span th:text="${playWord}"></span>
+                    </div>
+                    <div class="form-group row">
+                        <label th:for="*{playAnswer}" class="sr-only">Your answer: </label>
+                        <input type="text" th:field="*{playAnswer}" class="form-control"
+                               placeholder="your answer..."/>
+                    </div>
+
+                    <input type="submit" class="btn btn-outline-warning btn-lg btn-block" id="give-answer"
+                           value="Give Answer"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
